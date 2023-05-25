@@ -2974,6 +2974,7 @@ input, select, textarea {
 		height: 100vh;
 		overflow: hidden;
 		position: relative;
+		text-align: justify;
 	}
 
 		.spotlight:nth-last-of-type(1) {
@@ -3073,9 +3074,6 @@ input, select, textarea {
 			.spotlight .image.main img {
 				position: relative;
 			}
-
-			
-
 
 		.spotlight .content {
 			-moz-transform: translate(0,0);
@@ -3201,6 +3199,7 @@ input, select, textarea {
 
 	.wrapper {
 		padding: 6em 0 4em 0;
+		text-align: justify;
 	}
 
 		.wrapper.style2 {
