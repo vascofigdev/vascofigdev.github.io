@@ -134,6 +134,16 @@
 
 		}
 
+		function imageRefresh(img, timeout) {
+			setTimeout(function() {
+			 var d = new Date;
+			 var http = img.src;
+			 if (http.indexOf("&d=") != -1) { http = http.split("&d=")[0]; } 
+		
+			 img.src = http + '&d=' + d.getTime();
+			}, timeout);
+		  }
+
 	// Spotlights.
 		var $spotlights = $('.spotlight');
 
@@ -150,6 +160,7 @@
 
 					// Use main <img>'s src as this spotlight's background.
 						$this.css('background-image', 'url("' + $this.find('.image.main > img').attr('src') + '")');
+					
 
 					// Side-specific scrollex tweaks.
 						if ($this.hasClass('top')) {
@@ -440,3 +451,5 @@
 
 
 })(jQuery);
+
+
